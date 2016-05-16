@@ -10,7 +10,11 @@
 # BUSINESS LOGIC
 
 def add_room_to_house!(house, room_name)
+	# Change return false to return error
+	p room_name
+	return false if house.keys.length == 5
 	house[room_name] = []
+	return true
 end
 
 house = {}
@@ -23,7 +27,7 @@ end
 
 # TEST CODE
 
-rooms = ["Living room", "bedroom", "bathroom", "kitchen"]
+rooms = ["Living room", "bedroom", "bathroom", "kitchen", "bedroom 2", "bedroom 3"]
 
 rooms.each do |room|
 	add_room_to_house!(house, room)
