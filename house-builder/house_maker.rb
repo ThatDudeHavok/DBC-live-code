@@ -9,9 +9,9 @@
 
 # BUSINESS LOGIC
 
-def parse_room_input(inputted_name)
-	# Clean up input
-end
+# def parse_room_input(inputted_name)
+# 	# Clean up input
+# end
 
 def add_room_to_house!(house, room_name)
 	# Change return false to return error
