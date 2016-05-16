@@ -35,14 +35,3 @@ def print_house(house)
 	end
 	puts "-"*10
 end
-
-# TEST CODE
-
-rooms = ["Living room", "bedroom", "bathroom", "kitchen", "bedroom 2", "bedroom 3"]
-
-rooms.each do |room|
-	room_added = add_room_to_house!(house, room)
-	add_item_to_room!(house, room, "cat") if room_added
-end
-
-print_house(house)
