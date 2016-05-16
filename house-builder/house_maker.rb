@@ -35,3 +35,12 @@ def print_house(house)
 	end
 	puts "-"*10
 end
+
+# Let the user add rooms
+# Get a room name from the user
+puts "Type the name of a room to add (or type 'done'):"
+# If the user is done, stop loop
+# Otherwise, add the room to the house
+# Stop loop when rooms cannot be added
+
+# Let the user add items to rooms
