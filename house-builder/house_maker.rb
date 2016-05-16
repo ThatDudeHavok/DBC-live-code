@@ -57,6 +57,14 @@ while can_add_rooms
 	# will function for now.
 #	can_add_rooms = add_room_to_house!(house, parse_room_input(room_name))
 	can_add_rooms = add_room_to_house!(house, room_name)
+	if !can_add_rooms
+		# Don't forget to remove this when migraiting
+		# room limit logic / error handing to
+		# add_room_to_house method. At least
+		# I think that's how I was planning on donig
+		# it.
+		puts "Sorry, that's too many rooms!"
+	end
 	print_house(house)
 end
 
