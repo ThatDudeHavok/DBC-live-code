@@ -17,6 +17,12 @@ def add_room_to_house!(house, room_name)
 	return true
 end
 
+def add_item_to_room!(house, room_name, item_name)
+	# checkout difference between shovel
+	# operator(<<) and push operator(.push)
+	house[room_name] << item_name
+end
+
 house = {}
 
 # USER INTERFACE
@@ -30,7 +36,8 @@ end
 rooms = ["Living room", "bedroom", "bathroom", "kitchen", "bedroom 2", "bedroom 3"]
 
 rooms.each do |room|
-	add_room_to_house!(house, room)
+	room_added = add_room_to_house!(house, room)
+	add_item_to_room!(house, room, "cat") if room_added
 end
 
 print_house(house)
