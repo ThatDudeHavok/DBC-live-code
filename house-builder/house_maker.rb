@@ -28,7 +28,12 @@ house = {}
 # USER INTERFACE
 
 def print_house(house)
-	p house
+	puts "-"*10
+	puts "Current house configuration"
+	house.each do |room, items|
+		puts "#{room}: #{items}"
+	end
+	puts "-"*10
 end
 
 # TEST CODE
