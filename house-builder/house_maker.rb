@@ -9,6 +9,10 @@
 
 # BUSINESS LOGIC
 
+def parse_room_input(inputted_name)
+	# Clean up input
+end
+
 def add_room_to_house!(house, room_name)
 	# Change return false to return error
 	p room_name
@@ -47,6 +51,11 @@ while can_add_rooms
 	# If the user is done, stop loop
 	break if room_name == 'done'
 	# Otherwise, add the room to the house
+	# if I wanted to parse input when adding
+	# a room I could use commented out code
+	# line below, keeping original so thing
+	# will function for now.
+#	can_add_rooms = add_room_to_house!(house, parse_room_input(room_name))
 	can_add_rooms = add_room_to_house!(house, room_name)
 	print_house(house)
 end
