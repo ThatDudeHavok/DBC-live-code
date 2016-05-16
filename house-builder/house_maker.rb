@@ -15,6 +15,10 @@ end
 
 house = {}
 
+# USER INTERFACE
+
+
+
 # TEST CODE
 
 rooms = ["Living room", "bedroom", "bathroom", "kitchen"]
@@ -23,5 +27,3 @@ rooms.each do |room|
 	add_room_to_house(house, room)
 end
 p house
-
-# USER INTERFACE
