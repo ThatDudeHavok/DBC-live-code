@@ -37,10 +37,17 @@ def print_house(house)
 end
 
 # Let the user add rooms
-# Get a room name from the user
-puts "Type the name of a room to add (or type 'done'):"
-# If the user is done, stop loop
-# Otherwise, add the room to the house
-# Stop loop when rooms cannot be added
+can_add_rooms = true
 
+# Stop loop when rooms cannot be added
+while can_add_rooms
+	# Get a room name from the user
+	puts "Type the name of a room to add (or type 'done'):"
+	room_name = gets.chomp
+	# If the user is done, stop loop
+	break if room_name == 'done'
+	# Otherwise, add the room to the house
+	can_add_rooms = add_room_to_house!(house, room_name)
+	print_house(house)
+end
 # Let the user add items to rooms
