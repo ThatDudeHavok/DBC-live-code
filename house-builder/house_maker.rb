@@ -50,4 +50,7 @@ while can_add_rooms
 	can_add_rooms = add_room_to_house!(house, room_name)
 	print_house(house)
 end
+
 # Let the user add items to rooms
+# Ask the user for the number of
+# the room they want to add items to
