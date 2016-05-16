@@ -17,7 +17,9 @@ house = {}
 
 # USER INTERFACE
 
-
+def print_house(house)
+	p house
+end
 
 # TEST CODE
 
@@ -26,4 +28,5 @@ rooms = ["Living room", "bedroom", "bathroom", "kitchen"]
 rooms.each do |room|
 	add_room_to_house(house, room)
 end
-p house
+
+print_house(house)
