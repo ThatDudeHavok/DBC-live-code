@@ -9,7 +9,7 @@
 
 # BUSINESS LOGIC
 
-def add_room_to_house(house, room_name)
+def add_room_to_house!(house, room_name)
 	house[room_name] = []
 end
 
@@ -26,7 +26,7 @@ end
 rooms = ["Living room", "bedroom", "bathroom", "kitchen"]
 
 rooms.each do |room|
-	add_room_to_house(house, room)
+	add_room_to_house!(house, room)
 end
 
 print_house(house)
