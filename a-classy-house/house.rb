@@ -38,6 +38,14 @@ class House
 		end
 	end
 
+	def total_value
+		value = 0
+		@rooms.each do |room|
+			value += room.total_value
+		end
+		value
+	end
+
 	def to_s
 		house_str = ""
 		@rooms.each do |room|
@@ -74,3 +82,4 @@ house.add_room(living_room)
 house.add_room(kitchen)
 
 puts house
+puts house.total_value
