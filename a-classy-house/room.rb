@@ -20,4 +20,12 @@ class Room
 		@length = length
 		@items = []
 	end
+
+	def total_value
+		total = 0
+		@items.each do |item|
+			total += item.price
+		end
+		total
+	end
 end
