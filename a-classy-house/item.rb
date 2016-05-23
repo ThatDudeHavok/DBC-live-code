@@ -28,3 +28,6 @@ end
 
 item = Item.new("Cardboard box", "brown", 0)
 puts item
+
+item2 = Item.new("piano", "black", 10000)
+puts item2
