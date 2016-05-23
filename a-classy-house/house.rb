@@ -23,12 +23,3 @@
 # - setter for items, name
 # - total value (adds up prices of items)
 # - to_s override
-
-# ITEM CLASS
-# Attributes:
-# - name
-# - color
-# - price
-# Methods:
-# - getters for color, price, name
-# - to_s override
