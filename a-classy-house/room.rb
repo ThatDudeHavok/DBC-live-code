@@ -11,6 +11,7 @@
 # - to_s override
 
 require_relative 'item'
+
 class Room
 	attr_reader :length, :width
 	attr_accessor :items, :Name
