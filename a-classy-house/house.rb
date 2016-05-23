@@ -12,6 +12,16 @@
 # in all rooms)
 # - to_s override
 
+require_relative 'room'
+# This was done in the video, but I don't agree
+# with it's use here. room already requires the
+# file, so this is redundent. Also, house never
+# interacts directly with the item class. So,
+# it doesn't make sense logically that the house
+# class would ever need access to item, only room
+# should have that access.
+require_relative 'item'
+
 class House
 	attr_reader :rooms
 
@@ -43,10 +53,24 @@ class House
 	end
 end
 
+#Make house
+house = House.new
+
+# Make living room
 living_room = Room.new("Living room", 20, 35)
-puts living_room
 piano = Item.new("Piano", "black", 10000)
 box = Item.new("cardboard box", "brown", 0)
 living_room.items << piano
 living_room.items << box
-puts living_room.total_value
+
+# Make kitchen
+kitchen = Room.new("Kitchen", 10, 15)
+sink = Item.new("sink", "white", 5000)
+oven = Item.new("oven", "white", 3000)
+kitchen.items << sink
+kitchen.items << oven
+
+house.add_room(living_room)
+house.add_room(kitchen)
+
+puts house
