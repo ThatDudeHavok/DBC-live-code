@@ -18,6 +18,29 @@ class House
 	def initialize
 		@rooms = []
 	end
+
+	def add_room(room)
+		if @rooms.length < 11
+			@rooms << room
+			true
+		else
+			false
+		end
+	end
+
+	def to_s
+		house_str = ""
+		@rooms.each do |room|
+			house_str << room.to_s.upcase
+			house_str << "\n\n"
+			room.items.each do |item|
+				house_str << item.to_s
+				house_str << "\n"
+			end
+			house_str << "\n"
+		end
+		house_str
+	end
 end
 
 living_room = Room.new("Living room", 20, 35)
