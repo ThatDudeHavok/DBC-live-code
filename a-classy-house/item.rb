@@ -21,3 +21,6 @@ class Item
 		@price = price
 	end
 end
+
+item = Item.new("Cardboard box", "brown", 0)
+puts item
