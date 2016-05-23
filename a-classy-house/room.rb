@@ -28,4 +28,14 @@ class Room
 		end
 		total
 	end
+
+	def to_s
+		# name without @ will work because we
+		# set up a getter method for name when
+		# we used attr_accessor. So we just be
+		# calling this classes instance method
+		# if we did not put an @ symbol in front
+		# of name.
+		"#{@name} (#{@width} x #{@length})"
+	end
 end
