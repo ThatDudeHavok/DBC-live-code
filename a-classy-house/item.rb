@@ -20,6 +20,10 @@ class Item
 		@color = color
 		@price = price
 	end
+
+	def to_s
+		"A #{@color} #{@name} that cost #{@price} cents"
+	end
 end
 
 item = Item.new("Cardboard box", "brown", 0)
