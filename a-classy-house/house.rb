@@ -12,6 +12,14 @@
 # in all rooms)
 # - to_s override
 
+class House
+	attr_reader :rooms
+
+	def initialize
+		@rooms = []
+	end
+end
+
 living_room = Room.new("Living room", 20, 35)
 puts living_room
 piano = Item.new("Piano", "black", 10000)
